@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Layout } from '../src/layout';
+import { Layout } from '../src/Layout';
 import Head from 'next/head';
 // import '../styles/globals.css'
 
