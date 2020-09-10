@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Layout } from '../src/Layout';
+import Header from '../components/Header';
 import Head from 'next/head';
 // import '../styles/globals.css'
 
@@ -23,7 +23,7 @@ export default function MyApp (props) {
             <title>Brynn Kerin / Wellness Advocate</title>
             <meta name='viewport' content='minimum-scale=1, initial-scale=1, width=device-width' />
         </Head>
-      <Layout />
+      <Header />
         <Component {...pageProps} />
       
     </>
