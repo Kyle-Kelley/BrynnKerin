@@ -1,6 +1,6 @@
 setup github repo (check)
 push nextjs project to github (check)
-deploy on vercel 
+deploy on vercel (check)
 purchase domain name on hover.com (check)
 construct _app.js template
     - theme provider
