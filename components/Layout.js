@@ -1,19 +1,65 @@
+import React from "react";
 import Head from "next/head";
-import Header from "./Header";
+import Link from "next/link";
 
-export default function Layout({ children, pageTitle, description }) {
+export default function Layout({ children }) {
   return (
-    <>
+    <div className="container">
       <Head>
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta charSet="utf-8" />
-        <meta name="Description" content={description}></meta>
-        <title>{pageTitle}</title>
+        <title>Brynn's Blog</title>
+        <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main>
-        <Header />
-        <div className="content">{children}</div>
-      </main>
-    </>
+
+      <header>
+        <h1>
+          <Link href="/">
+            <a>Home Page</a>
+          </Link>
+        </h1>
+      </header>
+      <main>{children}</main>
+      <style jsx>{`
+        .container {
+          max-width: 42rem;
+          margin: 0 auto;
+          padding: 0 0.5rem;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+        }
+
+        header h1 a {
+          color: #000;
+          text-decoration: none;
+        }
+
+        main {
+          padding: 2rem 0;
+          display: flex;
+          flex-direction: column;
+          justify-content: flex-start;
+        }
+      `}</style>
+      <style jsx global>{`
+        html,
+        body {
+          padding: 0;
+          margin: 0;
+          font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
+            Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue,
+            sans-serif;
+        }
+
+        a,
+        a:visited {
+          color: blue;
+        }
+
+        * {
+          box-sizing: border-box;
+        }
+      `}</style>
+    </div>
   );
 }

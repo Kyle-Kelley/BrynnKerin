@@ -12,9 +12,11 @@
     "@material-ui/icons": "^4.9.1",
     "@mdx-js/loader": "^1.6.16",
     "@next/mdx": "^9.5.3",
+    "contentful": "^7.14.6",
     "next": "9.5.2",
     "react": "16.13.1",
-    "react-dom": "16.13.1"
+    "react-dom": "16.13.1",
+    "react-markdown": "^4.3.1"
   },
   "devDependencies": {
     "prettier": "2.1.1"

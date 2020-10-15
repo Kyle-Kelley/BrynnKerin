@@ -2,8 +2,6 @@ import React from "react";
 import PropTypes from "prop-types";
 import Header from "../components/Header";
 import Head from "next/head";
-import Layout from "../components/Layout";
-// import '../styles/globals.css'
 
 export default function MyApp(props) {
   const { Component, pageProps } = props;
@@ -28,9 +26,7 @@ export default function MyApp(props) {
         />
       </Head>
       <Header />
-      <Layout pageTitle="Blog" description="My Personal blog">
-        <Component {...pageProps} />
-      </Layout>
+      <Component {...pageProps} />
     </>
   );
 }

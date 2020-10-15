@@ -2,6 +2,12 @@ setup github repo (check)
 push nextjs project to github (check)
 deploy on vercel (check)
 purchase domain name on hover.com (check)
+clean up project file
+implement blog with contenful
+make links in drawer work
+fix layout to work on all pages
+
+
 construct _app.js template
     - theme provider
     - layout
