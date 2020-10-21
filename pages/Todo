@@ -5,14 +5,19 @@ purchase domain name on hover.com (check)
 clean up project file
 implement blog with contenful
 make links in drawer work
-fix layout to work on all pages
+
+make nav menu (check)
+create path to the pages
+link to all pages in menu
 
 
-construct _app.js template
+construct _app.js template (check)
     - theme provider
     - layout
 
-make nav menu
+Make Layout component
+
+
 
 
 admin login

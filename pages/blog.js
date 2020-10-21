@@ -1,32 +1,64 @@
-import Layout from "../components/Layout";
-import PostList from "../components/PostList";
+import React from "react";
+import { useState, useEffect } from "react";
+import Post from "../components/Post";
 
-export default function Index({ posts }) {
+const client = require("contentful").createClient({
+  space: process.env.NEXT_PUBLIC_CONTENTFUL_SPACE_ID,
+  accessToken: process.env.NEXT_PUBLIC_CONTENTFUL_ACCESS_TOKEN,
+});
+
+export default function Blog() {
+  async function fetchEntries() {
+    const entries = await client.getEntries();
+    if (entries.items) return entries.items;
+    console.log(`Error getting Entries for ${contentType.name}.`);
+  }
+
+  const [posts, setPosts] = useState([]);
+
+  useEffect(() => {
+    async function getPosts() {
+      const allPosts = await fetchEntries();
+      setPosts([...allPosts]);
+    }
+    getPosts();
+  }, []);
+
   return (
     <div>
-      <PostList posts={posts} />
+      {posts.length > 0
+        ? posts.map((p) => (
+            <Post
+              date={p.fields.publishedDate}
+              key={p.fields.title}
+              author={p.fields.author}
+              title={p.fields.title}
+              url={p.fields.slug}
+            />
+          ))
+        : null}
     </div>
   );
 }
 
-export async function getStaticProps() {
-  // Create an instance of the Contentful JavaScript SDK
-  const client = require("contentful").createClient({
-    space: process.env.CONTENTFUL_SPACE_ID,
-    accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
-  });
+// export async function getStaticProps() {
+//   // Create an instance of the Contentful JavaScript SDK
+//   const client = require("contentful").createClient({
+//     space: process.env.CONTENTFUL_SPACE_ID,
+//     accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
+//   });
 
-  // Fetch all entries of content_type `blogPost`
-  const posts = await client
-    .getEntries({ content_type: "blogPost" })
-    .then((response) => response.items);
+//   // Fetch all entries of content_type `blogPost`
+//   const posts = await client
+//     .getEntries({ content_type: "blogPost" })
+//     .then((response) => response.items);
 
-  return {
-    props: {
-      posts,
-    },
-  };
-}
+//   return {
+//     props: {
+//       posts,
+//     },
+//   };
+// }
 
 // import React from "react";
 // import { useEffect, useState } from "react";

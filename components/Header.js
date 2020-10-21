@@ -1,10 +1,10 @@
 import React from "react";
-import MyDrawer from "../components/Drawer";
+import MyMenu from "./Menu";
 
 export default function Home() {
   return (
     <div>
-      <MyDrawer />
+      <MyMenu />
     </div>
   );
 }

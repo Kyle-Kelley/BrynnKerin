@@ -1,21 +1,32 @@
 import React from "react";
 import Markdown from "react-markdown";
 import Author from "./Author";
+import Link from "next/link";
 
-export default function Post({ post }) {
+// export default function Post({ post }) {
+//   return (
+//     <div>
+//       <h1>This is a post</h1>
+//       <p>this is the post body this is the post body this is the post body</p>
+//     </div>
+//   );
+// }
+
+export default function Post({ post, date, author, title, url }) {
   return (
     <article>
       <header>
-        <h1>{post.fields.title}</h1>
+        <h1>{title}</h1>
+        <Link href={url} />
         <small>
-          <p>Published: {Date(post.fields.publishedDate).toString()}</p>
+          <p>Published: {Date(date).toString()}</p>
         </small>
       </header>
       <section>
         <Markdown source={post.fields.body} escapeHtml={true} />
       </section>
       <footer>
-        <Author author={post.fields.author} />
+        <Author author={author} />
       </footer>
       <style jsx>{`
         header {
