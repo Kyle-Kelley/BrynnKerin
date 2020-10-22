@@ -1,42 +1,51 @@
 import React from "react";
 import { useState, useEffect } from "react";
-import Post from "../components/Post";
+// import Post from "../components/Post";
+import * as Contentful from "contentful";
+import PostList from "../components/PostList";
 
-const client = require("contentful").createClient({
+// const Contentful = require("contentful");
+
+const client = Contentful.createClient({
   space: process.env.NEXT_PUBLIC_CONTENTFUL_SPACE_ID,
   accessToken: process.env.NEXT_PUBLIC_CONTENTFUL_ACCESS_TOKEN,
 });
 
 export default function Blog() {
-  async function fetchEntries() {
-    const entries = await client.getEntries();
-    if (entries.items) return entries.items;
-    console.log(`Error getting Entries for ${contentType.name}.`);
-  }
-
   const [posts, setPosts] = useState([]);
 
   useEffect(() => {
-    async function getPosts() {
-      const allPosts = await fetchEntries();
-      setPosts([...allPosts]);
-    }
-    getPosts();
+    client
+      .getEntries({
+        content_type: "blogPost",
+        order: "-sys.createdAt",
+      })
+      .then((response) => {
+        setPosts(response.items);
+        console.log(response.items);
+      });
   }, []);
+
+  // const myPosts = posts.map((post) => {
+  //   <div className="post" key={post.sys.id}>
+  //     <h1>{post.fields.title}</h1>
+  //     {post.fields.description}
+  //   </div>;
+  // });
+
+  // <p>
+  //       {entry.map((post) => {
+  //         <div className="post" key={post.sys.id}>
+  //           <h1>{post.fields.title}</h1>
+  //           {post.fields.description}
+  //         </div>;
+  //       })}
+  //     </p>
 
   return (
     <div>
-      {posts.length > 0
-        ? posts.map((p) => (
-            <Post
-              date={p.fields.publishedDate}
-              key={p.fields.title}
-              author={p.fields.author}
-              title={p.fields.title}
-              url={p.fields.slug}
-            />
-          ))
-        : null}
+      <h1>Hello!</h1> the following: {JSON.stringify(posts)}
+      <PostList posts={posts} />
     </div>
   );
 }

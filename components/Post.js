@@ -3,15 +3,6 @@ import Markdown from "react-markdown";
 import Author from "./Author";
 import Link from "next/link";
 
-// export default function Post({ post }) {
-//   return (
-//     <div>
-//       <h1>This is a post</h1>
-//       <p>this is the post body this is the post body this is the post body</p>
-//     </div>
-//   );
-// }
-
 export default function Post({ post, date, author, title, url }) {
   return (
     <article>
