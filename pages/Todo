@@ -2,29 +2,29 @@ setup github repo (check)
 push nextjs project to github (check)
 deploy on vercel (check)
 purchase domain name on hover.com (check)
-clean up project file
-implement blog with contenful
-link github and vercel to auto update
-
+clean up project file (check)
+implement blog with contenful (check)
 make nav menu (check)
-create path to the pages
-link to all pages in menu
-
-
 construct _app.js template (check)
-    - theme provider
-    - layout
-
-Make Layout component
 
 
 
+style blog posts 
+get author component working
+link github and vercel to auto update
+link to all pages in menu
+meet with Brynn about design
+make layout component (check)
+build content model for:
+    - yoga page
+    - Coaching page
+    - Workshops
+    
 
-admin login
-edit capability
+
+
 Blog Page
-    - comments
-    - claps
+
 Yoga Page
     - pics
     - schedule

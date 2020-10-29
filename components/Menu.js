@@ -17,7 +17,7 @@ export default function MyMenu() {
   };
 
   return (
-    <div>
+    <div className="menu">
       <Button
         aria-controls="simple-menu"
         aria-haspopup="true"
@@ -36,13 +36,28 @@ export default function MyMenu() {
           <Link href="/">Home</Link>
         </MenuItem>
         <MenuItem onClick={handleClose}>
+          <Link href="/about">About Me</Link>
+        </MenuItem>
+        <MenuItem onClick={handleClose}>
           <Link href="/blog">Blog</Link>
         </MenuItem>
         <MenuItem onClick={handleClose}>
-          <Link href="/">Home</Link>
+          <Link href="/yoga">Yoga</Link>
         </MenuItem>
         <MenuItem onClick={handleClose}>
-          <Link href="/">Home</Link>
+          <Link href="/wellnessAdvocacy">Wellness Advocacy</Link>
+        </MenuItem>
+        <MenuItem onClick={handleClose}>
+          <Link href="/theta">Theta Healing</Link>
+        </MenuItem>
+        <MenuItem onClick={handleClose}>
+          <Link href="/upcoming">Upcoming</Link>
+        </MenuItem>
+        <MenuItem onClick={handleClose}>
+          <Link href="/podcast">Podcasts</Link>
+        </MenuItem>
+        <MenuItem onClick={handleClose}>
+          <Link href="/contact">Contact</Link>
         </MenuItem>
       </Menu>
     </div>

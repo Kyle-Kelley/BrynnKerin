@@ -1,32 +1,24 @@
 import React from "react";
 import Head from "next/head";
-import Link from "next/link";
+import Header from "../components/Header";
 
 export default function Layout({ children }) {
   return (
-    <div className="container">
+    <div>
       <Head>
         <title>Brynn's Blog</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-
-      <header>
-        <h1>
-          <Link href="/">
-            <a>Home Page</a>
-          </Link>
-        </h1>
-      </header>
-      <main>{children}</main>
+      <Header />
+      <main className="container">{children}</main>
       <style jsx>{`
         .container {
-          max-width: 42rem;
-          margin: 0 auto;
-          padding: 0 0.5rem;
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
-          align-items: center;
+          background: beige;
+          width: 85vw;
+          height: 100%;
+          margin: 50px auto;
+          border-radius: 10px;
+          text-align: center;
         }
 
         header h1 a {

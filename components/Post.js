@@ -1,14 +1,12 @@
 import React from "react";
 import Markdown from "react-markdown";
-import Author from "./Author";
-import Link from "next/link";
 
-export default function Post({ post, date, author, title, url }) {
+export default function Post({ post, date }) {
   return (
     <article>
       <header>
-        <h1>{title}</h1>
-        <Link href={url} />
+        <img src="/BrynnAvatar.JPG" alt="Brynn Kerin" />
+        <h1>{post.fields.title}</h1>
         <small>
           <p>Published: {Date(date).toString()}</p>
         </small>
@@ -16,9 +14,6 @@ export default function Post({ post, date, author, title, url }) {
       <section>
         <Markdown source={post.fields.body} escapeHtml={true} />
       </section>
-      <footer>
-        <Author author={author} />
-      </footer>
       <style jsx>{`
         header {
           margin-bottom: 2rem;
@@ -28,6 +23,9 @@ export default function Post({ post, date, author, title, url }) {
         header h1 {
           font-size: 3rem;
           margin-bottom: 1rem;
+        }
+        img {
+          width: 100px;
         }
         /*
         The section :global() selector is necessary to target the content

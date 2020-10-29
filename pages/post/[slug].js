@@ -1,7 +1,13 @@
 import React from "react";
+import { useState, useEffect } from "react";
 import Head from "next/head";
 import Post from "../../components/Post";
 import * as Contentful from "contentful";
+
+const client = Contentful.createClient({
+  space: process.env.NEXT_PUBLIC_CONTENTFUL_SPACE_ID,
+  accessToken: process.env.NEXT_PUBLIC_CONTENTFUL_ACCESS_TOKEN,
+});
 
 export default function Slug({ post }) {
   return (
@@ -9,7 +15,9 @@ export default function Slug({ post }) {
       <Head>
         <title>{post.fields.title}</title>
       </Head>
-      <Post post={post} />
+      <div>
+        <Post post={post} />
+      </div>
     </>
   );
 }
