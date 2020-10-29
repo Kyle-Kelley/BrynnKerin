@@ -10,7 +10,6 @@ construct _app.js template (check)
 
 
 style blog posts 
-get author component working
 link github and vercel to auto update
 link to all pages in menu
 meet with Brynn about design

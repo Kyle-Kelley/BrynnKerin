@@ -25,7 +25,9 @@ export default function Post({ post, date }) {
           margin-bottom: 1rem;
         }
         img {
-          width: 100px;
+          width: 130px;
+          border: 2px solid #fff;
+          border-radius: 10px;
         }
         /*
         The section :global() selector is necessary to target the content
