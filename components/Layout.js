@@ -4,7 +4,7 @@ import Header from "../components/Header";
 
 export default function Layout({ children }) {
   return (
-    <div>
+    <div className="whole">
       <Head>
         <title>Brynn's Blog</title>
         <link rel="icon" href="/favicon.ico" />
@@ -12,10 +12,15 @@ export default function Layout({ children }) {
       <Header />
       <main className="container">{children}</main>
       <style jsx>{`
+        .whole {
+          background: blanchedAlmond;
+          height: 100vh;
+        }
         .container {
-          background: beige;
+          background: lightgreen;
+          color: #1815e6;
           width: 85vw;
-          height: 100%;
+          // height: 100%;
           margin: 50px auto;
           border-radius: 10px;
           text-align: center;
