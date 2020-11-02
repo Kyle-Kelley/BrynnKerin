@@ -1,6 +1,7 @@
 import React from "react";
 import Head from "next/head";
 import Header from "../components/Header";
+import Footer from "../components/Footer";
 
 export default function Layout({ children }) {
   return (
@@ -11,10 +12,11 @@ export default function Layout({ children }) {
       </Head>
       <Header />
       <main className="container">{children}</main>
+      <Footer />
       <style jsx>{`
         .whole {
           background: blanchedAlmond;
-          height: 100vh;
+          min-height: 100vh;
         }
         .container {
           background: lightgreen;
