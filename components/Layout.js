@@ -15,12 +15,14 @@ export default function Layout({ children }) {
       <Footer />
       <style jsx>{`
         .whole {
-          background: blanchedAlmond;
+          background: #fffff0;
           min-height: 100vh;
         }
+
         .container {
-          background: lightgreen;
-          color: #1815e6;
+          background: #fffaf0;
+          color: black;
+          border: 1px solid #78a383;
           width: 85vw;
           // height: 100%;
           margin: 50px auto;
@@ -52,7 +54,7 @@ export default function Layout({ children }) {
 
         a,
         a:visited {
-          color: blue;
+          color: #ffc200;
         }
 
         * {

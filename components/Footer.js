@@ -12,7 +12,7 @@ export default function Footer() {
     <div className="footer">
       <footer>
         <MyLink href="https://www.instagram.com/brynniebaby/?hl=en">
-          <InstagramIcon fontSize="Large" />
+          <InstagramIcon fontSize="large" />
         </MyLink>
       </footer>
       <style jsx>{`
