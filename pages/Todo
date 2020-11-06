@@ -6,23 +6,29 @@ clean up project file (check)
 implement blog with contenful (check)
 make nav menu (check)
 construct _app.js template (check)
-
-
-
-style blog posts 
 link github and vercel to auto update (check)
 link to all pages in menu (check)
 meet with Brynn about design (check)
 make layout component (check)
+CONDITIONAL RENDER MOBILE MENU (check)
+    - MobileNav
+    - DesktopNav
+scratch upcoming page (check)
+navbar instead of menubar (check)
+
+
+style blog posts 
+style testimonials
 build content model for:
     - yoga page
     - Coaching page
     - Workshops
+    - Testimonials (check)
+    - Podcasts
     
 11-2:
-scratch upcoming page (check)
+
 brynn wants it to be inviting and interactive
-navbar instead of menubar (check)
 pagination of content on pages (not all 100 blog posts all poured out)
 picture on each page
 refer to Alice's about page (background image)
@@ -30,9 +36,7 @@ social media in footer (all pages)
 search bar (?)
 FONT MATTERS
 email attached to website
-CONDITIONAL RENDER MOBILE MENU (check)
-    - MobileNav
-    - DesktopNav
+
 
 
 

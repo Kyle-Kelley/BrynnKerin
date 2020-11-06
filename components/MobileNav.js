@@ -48,7 +48,7 @@ export default function MobileNav() {
           <Link href="/blog">Blog</Link>
         </MenuItem>
         <MenuItem onClick={handleClose}>
-          <Link href="/wellnessAdvocacy">Coaching</Link>
+          <Link href="/wellnessAdvocacy">Holistic Coaching</Link>
         </MenuItem>
         <MenuItem onClick={handleClose}>
           <Link href="/yoga">Yoga</Link>

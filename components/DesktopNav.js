@@ -29,7 +29,7 @@ export default function DesktopNav() {
         size="large"
         href="/wellnessAdvocacy"
       >
-        Coaching
+        Holistic Coaching
       </MyButton>
 
       <MyButton variant="contained" color="primary" size="large" href="/yoga">
