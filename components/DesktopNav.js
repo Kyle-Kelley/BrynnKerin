@@ -1,66 +1,93 @@
 import React from "react";
 import Button from "@material-ui/core/Button";
-import { styled } from "@material-ui/core/styles";
+import { makeStyles } from "@material-ui/core/styles";
 
-const MyButton = styled(Button)({
-  background: "#87ad91",
-  margin: "12px 24px",
-  border: "1px solid #d4af37",
-  borderRadius: "8px",
+const useStyles = makeStyles({
+  root: {
+    background: "#87ad91",
+    margin: "12px 24px",
+    border: "1px solid #d4af37",
+    borderRadius: "8px",
+  },
 });
 
-//"linear-gradient(45deg, #FE6B8B 30%, #FF8E53 90%)"
-
 export default function DesktopNav() {
+  const classes = useStyles();
   return (
-    <div className="navbar">
-      <MyButton variant="contained" color="primary" size="large" href="/">
-        Home
-      </MyButton>
-      <MyButton variant="contained" color="primary" size="large" href="/about">
-        About Me
-      </MyButton>
-      <MyButton variant="contained" color="primary" size="large" href="/blog">
-        Blog
-      </MyButton>
-      <MyButton
+    <div>
+      <Button
         variant="contained"
         color="primary"
+        className={classes.root}
+        size="large"
+        href="/"
+      >
+        Home
+      </Button>
+      <Button
+        variant="contained"
+        color="primary"
+        className={classes.root}
+        size="large"
+        href="/about"
+      >
+        About Me
+      </Button>
+      <Button
+        variant="contained"
+        color="primary"
+        className={classes.root}
+        size="large"
+        href="/blog"
+      >
+        Blog
+      </Button>
+      <Button
+        variant="contained"
+        color="primary"
+        className={classes.root}
         size="large"
         href="/wellnessAdvocacy"
       >
         Holistic Coaching
-      </MyButton>
+      </Button>
 
-      <MyButton variant="contained" color="primary" size="large" href="/yoga">
-        Yoga
-      </MyButton>
-      <MyButton variant="contained" color="primary" size="large" href="/theta">
-        Theta
-      </MyButton>
-      <MyButton
+      <Button
         variant="contained"
         color="primary"
+        className={classes.root}
+        size="large"
+        href="/yoga"
+      >
+        Yoga
+      </Button>
+      <Button
+        variant="contained"
+        color="primary"
+        className={classes.root}
+        size="large"
+        href="/theta"
+      >
+        Theta
+      </Button>
+      <Button
+        variant="contained"
+        color="primary"
+        className={classes.root}
         size="large"
         href="/podcast"
       >
         Podcasts
-      </MyButton>
-      <MyButton
+      </Button>
+      <Button
         variant="contained"
         color="primary"
+        className={classes.root}
         size="large"
         href="/contact"
       >
         Contact
-      </MyButton>
-      <style jsx>{`
-        .navbar {
-          text-align: center;
-          justify-content: center;
-          display: flex;
-        }
-      `}</style>
+      </Button>
     </div>
   );
 }

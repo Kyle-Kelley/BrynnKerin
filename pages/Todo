@@ -17,8 +17,15 @@ scratch upcoming page (check)
 navbar instead of menubar (check)
 
 
+    <CHANGE STYLED COMPONENTS>
+
+build contact page form (check)
+Get form to work on re-render
+fix link colors
+add brynn's name to header
 style blog posts 
 style testimonials
+make testimonial component
 build content model for:
     - yoga page
     - Coaching page

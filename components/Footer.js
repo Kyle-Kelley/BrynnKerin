@@ -1,19 +1,25 @@
 import React from "react";
 import Link from "@material-ui/core/Link";
 import InstagramIcon from "@material-ui/icons/Instagram";
-import { styled } from "@material-ui/core/styles";
+import { makeStyles } from "@material-ui/core/styles";
 
-const MyLink = styled(Link)({
-  padding: "25px 25px",
+const useStyles = makeStyles({
+  root: {
+    padding: "25px 25px",
+  },
 });
 
 export default function Footer() {
+  const classes = useStyles();
   return (
     <div className="footer">
       <footer>
-        <MyLink href="https://www.instagram.com/brynniebaby/?hl=en">
+        <Link
+          className={classes.root}
+          href="https://www.instagram.com/brynniebaby/?hl=en"
+        >
           <InstagramIcon fontSize="large" />
-        </MyLink>
+        </Link>
       </footer>
       <style jsx>{`
         .footer {

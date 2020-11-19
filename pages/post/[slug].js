@@ -1,5 +1,4 @@
 import React from "react";
-import { useState, useEffect } from "react";
 import Head from "next/head";
 import Post from "../../components/Post";
 import * as Contentful from "contentful";

@@ -1,12 +1,10 @@
 import React from "react";
+import ContactForm from "../components/ContactForm";
 
 export default function ContactMe() {
   return (
     <div>
-      <ul>
-        <li>Email:</li>
-        <li>Instagram:</li>
-      </ul>
+      <ContactForm />
     </div>
   );
 }
